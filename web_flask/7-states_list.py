@@ -5,6 +5,7 @@ from flask import render_template
 from models import storage
 app = Flask('web_flask')
 
+
 @app.teardown_appcontext
 def destroy_all(f):
     """destroys this app context"""
