@@ -4,6 +4,7 @@ from flask import Flask
 from flask import render_template
 from models import storage
 from models.state import State
+from models.amenity import Amenity
 app = Flask('web_flask')
 
 
@@ -16,8 +17,9 @@ def destroy_all(f):
 @app.route('/hbnb_filters', strict_slashes=False)
 def render_filters():
     """render the states from dbstorage"""
+    amen = storage.all(Amenity)
     states = storage.all(State)
-    return render_template('6-index.html', states=states)
+    return render_template('10-hbnb_filters.html', states=states, amen=amen)
 
 
 if __name__ == "__main__":
