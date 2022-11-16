@@ -51,5 +51,6 @@ This repository contains the initial stage of a student project to build a clone
 ## Authors
 
 Daniel Okyere <DanielOkyere>
+
 Brian Machiestay <Brian-Machiestay>
 
